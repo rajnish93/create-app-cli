@@ -26,7 +26,7 @@ const commands = {
 };
 
 const helpText = meowHelp({
-	name: `create-app-cli`,
+	name: `create-starter-cli`,
 	flags,
 	commands
 });

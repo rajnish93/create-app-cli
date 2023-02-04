@@ -5,7 +5,7 @@ const unhandled = require('cli-handle-unhandled');
 module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
-		title: `create-app-cli`,
+		title: `create-starter-cli`,
 		tagLine: `by Rajnish Singh`,
 		description: pkg.description,
 		version: pkg.version,

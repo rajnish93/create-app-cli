@@ -20,7 +20,7 @@ module.exports = async ({ name, message, hint, initial }) => {
 			store: new Store({
 				path: path.join(
 					os.homedir(),
-					`.history/create-app-cli/${name}.json`
+					`.history/create-starter-cli/${name}.json`
 				)
 			})
 		};

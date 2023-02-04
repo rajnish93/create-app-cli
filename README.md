@@ -13,7 +13,7 @@
 
 <br>
 
-# create-app-cli
+# create-starter-cli
 
 -   📦 Create a Node.js starter application with any repository in a minute
 -   🤯 Automatic argument parsing, help text, and welcome message
@@ -26,10 +26,10 @@
 
 ```sh
 # Recommended.
-npx create-app-cli
+npx create-starter-cli
 
 # OR an alternative global install.
-npm install -g create-app-cli
+npm install -g create-starter-cli
 ```
 
 <br>
@@ -39,10 +39,10 @@ npm install -g create-app-cli
 1. Run the CLI using
 
 ```sh
-npx create-app-cli
+npx create-starter-cli
 
 # OR for global install
-create-app-cli
+create-starter-cli
 # OR alias for global install
 rcli
 ```
@@ -62,7 +62,7 @@ Repository Url:
 #### BASIC USAGE
 
 ```sh
-create-app-cli <command> [option]
+create-starter-cli <command> [option]
 ```
 
 #### COMMANDS

@@ -1,12 +1,11 @@
 {
-	"name": "create-app-cli",
+	"name": "create-starter-cli",
 	"description": "CLI to create Node.js Application.",
 	"version": "1.0.0",
 	"bin": {
-		"create-app-cli": "index.js",
-		"rcli": "index.js"
+		"create-starter-cli": "index.js"
 	},
-	"repository": "rajnish93/create-app-cli",
+	"repository": "rajnish93/create-starter-cli",
 	"author": {
 		"name": "rajnish",
 		"email": "rksjnk@gmail.com",
@@ -17,7 +16,7 @@
 		"utils"
 	],
 	"keywords": [
-		"create-app-cli",
+		"create-starter-cli",
 		"command",
 		"cli",
 		"boilerplate",
