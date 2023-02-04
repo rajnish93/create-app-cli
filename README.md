@@ -7,7 +7,8 @@
 
 📟 CLI to create new Node.js applications.
 
-[![DOWNLOADS](https://img.shields.io/npm/dt/create-app-cli?label=DOWNLOADS%20%20%E2%9D%AF&colorA=6cc24a&colorB=6cc24a&style=flat)](https://www.npmjs.com/package/create-app-cli)
+[![npm version](https://img.shields.io/npm/v/create-starter-cli.svg?style=flat-square)](https://www.npmjs.com/package/create-starter-cli)
+[![DOWNLOADS](https://img.shields.io/npm/dt/create-starter-cli.svg?label=DOWNLOADS&style=flat)](https://www.npmjs.com/package/create-starter-cli)
 
 </h4>
 
