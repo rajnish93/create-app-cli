@@ -43,8 +43,6 @@ npx create-starter-cli
 
 # OR for global install
 create-starter-cli
-# OR alias for global install
-rcli
 ```
 
 _Then answer the following questions to generate a Node.js Application._

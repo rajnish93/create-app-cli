@@ -1,7 +1,7 @@
 {
 	"name": "create-starter-cli",
 	"description": "CLI to create Node.js Application.",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"bin": {
 		"create-starter-cli": "index.js"
 	},
