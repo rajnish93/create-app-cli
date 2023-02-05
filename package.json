@@ -27,6 +27,7 @@
 		"Rajnish",
 		"Rajnish Singh"
 	],
+	"license": "MIT",
 	"dependencies": {
 		"await-to-js": "^3.0.0",
 		"chalk": "^4.1.1",
