@@ -1,7 +1,7 @@
 {
 	"name": "create-starter-cli",
 	"description": "CLI to create Node.js Application.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"bin": {
 		"create-starter-cli": "index.js"
 	},
@@ -27,6 +27,7 @@
 		"Rajnish",
 		"Rajnish Singh"
 	],
+	"license": "MIT",
 	"dependencies": {
 		"await-to-js": "^3.0.0",
 		"chalk": "^4.1.1",
