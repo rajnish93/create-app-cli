@@ -1,12 +1,16 @@
-const ora = require('ora');
-const path = require('path');
-const fs = require('fs');
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-const { green: g, yellow: y, dim: d } = require('chalk');
+import ora from 'ora';
+import path from 'path';
+import fs from 'fs';
+import util from 'util';
+import { exec as execCb } from 'child_process';
+import chalk from 'chalk';
+// import { green as g, yellow as y, dim as d } from 'chalk';
+import questions from './questions.js';
+
+const exec = util.promisify(execCb);
 const spinner = ora({ text: '' });
-const questions = require('./questions');
-module.exports = async () => {
+
+export default async () => {
 	const vars = await questions();
 	const outDir = vars.name;
 	const ver = vars.version;
@@ -16,7 +20,7 @@ module.exports = async () => {
 	const authorUrl = vars.authorUrl;
 	const repo = vars.githubRepo;
 	const outDirPath = path.join(process.cwd(), outDir);
-	buildPackageJson = (packageJson, outDir) => {
+	const buildPackageJson = (packageJson, outDir) => {
 		const newPackage = {
 			...packageJson,
 			name: outDir,
@@ -31,15 +35,17 @@ module.exports = async () => {
 		);
 	};
 	try {
-		console.log(`${y(`Downloading the project structure...`)}`);
+		console.log(`${chalk.yellow(`Downloading the project structure...`)}`);
 		await exec(`git clone ${repo} ${outDir}`);
 		process.chdir(outDirPath);
 		spinner.start(
-			`${y(`Dependencies`)} installing…\n\n${d(`It may take moment…`)}`
+			`${chalk.yellow(`Dependencies`)} installing…\n\n${chalk.dim(
+				`It may take a moment…`
+			)}`
 		);
 		process.chdir(outDirPath);
 		await exec(`yarn`);
-		spinner.succeed(`${g(`Dependencies`)} installed!`);
+		spinner.succeed(`${chalk.green(`Dependencies`)} installed!`);
 		console.log();
 		await exec(`npx rimraf ./.git`);
 		const packageJson = require(`${outDirPath}/package.json`);
@@ -47,14 +53,14 @@ module.exports = async () => {
 		fs.unlinkSync(path.join(outDirPath, 'package.json'));
 		buildPackageJson(packageJson, outDir);
 		spinner.succeed(
-			`${g(`The installation is done, this is ready to use !`)}`
+			`${chalk.green(`The installation is done, this is ready to use!`)}`
 		);
 		console.log();
 		console.log('\x1b[34m', 'You can start by typing:');
-		console.log(`    ${g(`cd ${outDir}`)}`);
-		console.log(`    ${g(`yarn dev`)}`);
+		console.log(`    ${chalk.green(`cd ${outDir}`)}`);
+		console.log(`    ${chalk.green(`yarn dev`)}`);
 		console.log();
-		console.log('Check Readme.md for more informations');
+		console.log('Check Readme.md for more information');
 		console.log();
 	} catch (error) {
 		console.log(error);

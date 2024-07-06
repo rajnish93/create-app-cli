@@ -1,13 +1,13 @@
-const os = require('os');
-const fs = require('fs');
-const path = require('path');
+import os from 'os';
+import fs from 'fs';
+import path from 'path';
 const { Input } = require('enquirer');
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
-const shouldCancel = require('cli-should-cancel');
-const { Store } = require('data-store');
+import to from 'await-to-js';
+import handleError from 'cli-handle-error';
+import shouldCancel from 'cli-should-cancel';
+import { Store } from 'data-store';
 
-module.exports = async ({ name, message, hint, initial }) => {
+export default async ({ name, message, hint, initial }) => {
 	let history = false;
 	if (
 		!initial &&

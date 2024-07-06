@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const init = require('./utils/init');
-const cli = require('./utils/cli');
-const log = require('./utils/log');
-const generate = require('./utils/generate');
+import init from './utils/init.js'; // Remove the extra dot (.) after 'init'
+import cli from './utils/cli.js';
+import log from './utils/log.js';
+import generate from './utils/generate.js';
 
 const input = cli.input;
 const flags = cli.flags;

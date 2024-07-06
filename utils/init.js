@@ -1,14 +1,14 @@
-const welcome = require('cli-welcome');
-const pkg = require('./../package.json');
-const unhandled = require('cli-handle-unhandled');
+import welcome from 'cli-welcome';
+// import pkg from './../package.json';
+import unhandled from 'cli-handle-unhandled';
 
-module.exports = ({ clear = true }) => {
+export default ({ clear = true }) => {
 	unhandled();
 	welcome({
 		title: `create-starter-cli`,
 		tagLine: `by Rajnish Singh`,
-		description: pkg.description,
-		version: pkg.version,
+		description: '',
+		version: '',
 		bgColor: '#6cc24a',
 		color: '#000000',
 		bold: true,
